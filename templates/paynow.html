@@ -2,7 +2,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
 </head>
-
 <body>
     <div class="container">
         <h2>Transfer Money</h2>
@@ -75,10 +74,9 @@
             ]
             const web3 = new Web3(Web3.givenProvider);
             const contract = new web3.eth.Contract(contractABI,contractAddress);
-
             async function transfer() {
-              const accounts = await web3.eth.requestAccounts();
-              console.log(accounts[0]);
+                const accounts = await web3.eth.requestAccounts();
+                console.log(accounts[0]);
             }
             async function transaction() {
             }
